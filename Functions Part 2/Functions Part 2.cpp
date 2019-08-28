@@ -7,7 +7,7 @@ void showMenu() {
 	cout << "3. Quit" << endl;
 }
 
-int processSelection() {
+int getInput() {
 
 	cout << "Enter selction:" << flush;
 
@@ -21,7 +21,7 @@ int main()
 {
 
 	showMenu();
-	int input = processSelection();
+	int input = getInput();
 
 
 	switch (input) {

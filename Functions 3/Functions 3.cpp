@@ -1,19 +1,23 @@
 #include <iostream>
 using namespace std;
 
-void showMenu(){
+void showMenu() {
 	cout << "1. Search" << endl;
 	cout << "2. View record" << endl;
 	cout << "3. Quit" << endl;
 }
 
-void getInput() {
+int getInput() {
 
 	cout << "Enter selction:" << flush;
 
 	int input;
 	cin >> input;
 
+	return input;
+}
+
+void processSelection(int input) {
 	switch (input) {
 	case 1:
 		cout << "Searching..." << endl;
@@ -31,10 +35,12 @@ void getInput() {
 
 int main()
 {
-
 	showMenu();
-	getInput();
+	int input = getInput();
+	processSelection(input);
+
+
+	
 
 	return 0;
 }
-
